@@ -1,7 +1,8 @@
+![alt text](https://github.com/ChristianArredondo/angular-http-exercise/blob/master/AngularHttpScreenshot.png)
 
 # Angular Http Exercise
 
-A simple application to practice Http requests with Angular. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3. (NOTE: the Firebase project is now nonexistent, so there is no databse to post to or fetch from)
+A simple application to practice Http requests with Angular. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3. (NOTE: the Firebase project is now nonexistent, so there is no database to post to or fetch from)
 
 ## Development server
 
