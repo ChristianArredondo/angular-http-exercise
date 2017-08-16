@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ServerService } from './servers.service';
+import { Response } from '@angular/http/';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ export class AppComponent {
   ];
   constructor(private serverService: ServerService) { }
 
-  onSave() {
+  onSave () {
     this.serverService.storeServers(this.servers)
       .subscribe(
         (response) => console.log(response),
@@ -29,7 +30,18 @@ export class AppComponent {
       );
   }
 
-  onAddServer(name: string) {
+  onGet () {
+    this.serverService.getServers()
+      .subscribe(
+        (response: Response) => {
+          const data = response.json();
+          console.log(data);
+        },
+        (error) => console.log(error)
+      );
+  }
+
+  onAddServer (name: string) {
     this.servers.push({
       name: name,
       capacity: 50,
