@@ -8,6 +8,7 @@ import { Response } from '@angular/http/';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  appName = this.serverService.getAppName();
   servers = [
     {
       name: 'Testserver',
@@ -34,7 +35,7 @@ export class AppComponent {
     this.serverService.getServers()
       .subscribe(
         (servers: any[]) => {
-          console.log(servers);
+          this.servers = servers;
         },
         (error) => console.log(error)
       );
